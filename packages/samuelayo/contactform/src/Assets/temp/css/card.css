@@ -1,0 +1,104 @@
+<style type="text/css">
+		
+.payment-card{
+  position: relative;
+  width: 60rem;  
+  padding-bottom: 3.5rem;
+}
+
+.payment-card__front{
+  width: 65%;
+  padding: 5%;
+  
+  border-radius: 10px;
+  background-color: #f0f0ee;
+  box-shadow: 0 0 10px #f4f4f2;
+  border: 1px solid #a29e97;
+
+  position: relative;
+  z-index: 1;
+}
+
+.payment-card__back{
+  width: 65%;
+  padding: 25% 5% 10%;
+  text-align: end;
+  
+  border-radius: 10px;
+  border: 1px solid #dad9d6;
+  background-color: #e0ddd7;
+  box-shadow: 0 0 20px #f3f3f3;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.payment-card__back::before{
+  content: "";
+  width: 100%;
+  height: 6.5rem;
+  background-color: #8e8b85;
+
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+}
+
+.payment-card__group:nth-child(n+2){
+  margin-top: 2rem;
+}
+
+.payment-card__field{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.payment-card__month, .payment-card__year, .payment-card__cvc{
+  width: 25%;
+}
+
+.payment-card__hint{
+  position: absolute;
+  left: -9999px;
+}
+
+.payment-card__input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border: 3px solid #d0d0ce;  
+  
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.payment-card__input:focus{
+  outline: none;
+  border-color: #fdde60;
+}
+
+.payment-card__caption{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.payment-card__separator{
+  font-size: 3.2rem;
+  color: #c4c4c3;
+
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.payment-card__footer{
+  background-repeat: no-repeat;
+  background-position: calc(100% - 6.2rem) 50%, 100% 50%;
+  background-size: 5.2rem;  
+  background-image: url("{{ asset('images/card.jpg') }} ");
+}
+
+	</style>
